@@ -1,4 +1,5 @@
 "use client"
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import CounterDemo from "@/components/demos/counter-demo"
@@ -10,8 +11,10 @@ import AnimationDemo from "@/components/demos/animation-demo"
 export default function DemosPage() {
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">Demos de React con Next.js</h1>
-      <p className="text-lg text-center mb-12 max-w-3xl mx-auto">
+      <h1 className="text-4xl font-bold mb-8 text-center text-foreground">
+        Demos de React con Next.js
+      </h1>
+      <p className="text-lg text-center mb-12 max-w-3xl mx-auto text-muted-foreground">
         Explora estos ejemplos interactivos para ver cómo React y Next.js funcionan juntos para crear experiencias de
         usuario dinámicas y eficientes.
       </p>
@@ -95,7 +98,7 @@ export default function DemosPage() {
             <CardDescription>Los componentes son los bloques de construcción fundamentales en React</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="bg-slate-50 p-4 rounded-md mb-4">
+            <div className="bg-muted text-muted-foreground p-4 rounded-md mb-4">
               <pre className="text-sm overflow-x-auto">
                 {`function Greeting({ name }) {
   return <h1>Hola, {name}!</h1>;
@@ -105,7 +108,7 @@ export default function DemosPage() {
 <Greeting name="Usuario" />`}
               </pre>
             </div>
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-muted-foreground">
               Los componentes permiten dividir la UI en piezas independientes y reutilizables. Pueden recibir datos a
               través de props y mantener su propio estado interno.
             </p>
@@ -120,7 +123,7 @@ export default function DemosPage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="bg-slate-50 p-4 rounded-md mb-4">
+            <div className="bg-muted text-muted-foreground p-4 rounded-md mb-4">
               <pre className="text-sm overflow-x-auto">
                 {`import { useState, useEffect } from 'react';
 
@@ -142,7 +145,7 @@ function Example() {
 }`}
               </pre>
             </div>
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-muted-foreground">
               Los Hooks más comunes son useState para manejar estado y useEffect para efectos secundarios. También
               existen useContext, useReducer, useCallback, useMemo, entre otros.
             </p>
@@ -157,44 +160,40 @@ function Example() {
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold mb-2">Enrutamiento basado en archivos</h3>
-              <p className="text-sm text-slate-600">
+            <div className="border border-border bg-card text-card-foreground rounded-lg p-4">
+              <h3 className="font-semibold mb-2 text-foreground">Enrutamiento basado en archivos</h3>
+              <p className="text-sm text-muted-foreground">
                 Next.js crea rutas automáticamente basadas en la estructura de archivos en el directorio app/ o pages/.
               </p>
             </div>
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold mb-2">Renderizado híbrido</h3>
-              <p className="text-sm text-slate-600">
-                Soporta SSR (Server-Side Rendering), SSG (Static Site Generation), ISR (Incremental Static Regeneration)
-                y CSR (Client-Side Rendering).
+            <div className="border border-border bg-card text-card-foreground rounded-lg p-4">
+              <h3 className="font-semibold mb-2 text-foreground">Renderizado híbrido</h3>
+              <p className="text-sm text-muted-foreground">
+                Soporta SSR, SSG, ISR y CSR.
               </p>
             </div>
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold mb-2">API Routes</h3>
-              <p className="text-sm text-slate-600">
-                Permite crear endpoints de API dentro de tu aplicación Next.js, simplificando el desarrollo full-stack.
+            <div className="border border-border bg-card text-card-foreground rounded-lg p-4">
+              <h3 className="font-semibold mb-2 text-foreground">API Routes</h3>
+              <p className="text-sm text-muted-foreground">
+                Permite crear endpoints de API dentro de tu aplicación Next.js.
               </p>
             </div>
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold mb-2">Optimización de imágenes</h3>
-              <p className="text-sm text-slate-600">
-                El componente Image optimiza automáticamente las imágenes para mejorar el rendimiento y la experiencia
-                del usuario.
+            <div className="border border-border bg-card text-card-foreground rounded-lg p-4">
+              <h3 className="font-semibold mb-2 text-foreground">Optimización de imágenes</h3>
+              <p className="text-sm text-muted-foreground">
+                El componente Image optimiza automáticamente las imágenes.
               </p>
             </div>
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold mb-2">Server Components</h3>
-              <p className="text-sm text-slate-600">
-                Los componentes del servidor permiten renderizar componentes en el servidor, reduciendo el JavaScript
-                enviado al cliente.
+            <div className="border border-border bg-card text-card-foreground rounded-lg p-4">
+              <h3 className="font-semibold mb-2 text-foreground">Server Components</h3>
+              <p className="text-sm text-muted-foreground">
+                Permiten renderizar componentes en el servidor, reduciendo el JavaScript.
               </p>
             </div>
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold mb-2">Server Actions</h3>
-              <p className="text-sm text-slate-600">
-                Permiten definir funciones asíncronas que se ejecutan en el servidor pero pueden ser invocadas desde el
-                cliente.
+            <div className="border border-border bg-card text-card-foreground rounded-lg p-4">
+              <h3 className="font-semibold mb-2 text-foreground">Server Actions</h3>
+              <p className="text-sm text-muted-foreground">
+                Ejecutan funciones del servidor desde el cliente de forma segura.
               </p>
             </div>
           </div>
