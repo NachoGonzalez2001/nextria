@@ -74,7 +74,7 @@ export default function TodoDemo() {
         ))}
       </div>
 
-      <Card className="w-full mt-4 p-4 bg-slate-50">
+      <Card className="w-full mt-4 p-4 ">
         <pre className="text-sm overflow-auto">
           {`// Código simplificado
 function TodoApp() {
