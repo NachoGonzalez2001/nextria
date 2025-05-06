@@ -68,47 +68,47 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="bg-slate-50 p-8 rounded-lg">
-        <h2 className="text-3xl font-bold mb-4">¿Por qué React con Next.js?</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <p className="mb-4">
-              React es una biblioteca de JavaScript para construir interfaces de usuario, mientras que Next.js es un
-              framework que se construye sobre React, añadiendo características como renderizado del lado del servidor,
-              generación de sitios estáticos, y más.
-            </p>
-            <p>
-              Juntos, proporcionan una experiencia de desarrollo potente y flexible para crear aplicaciones web modernas
-              y de alto rendimiento.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-3">Características destacadas:</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                Renderizado híbrido (cliente + servidor)
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                Enrutamiento basado en el sistema de archivos
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                Optimización automática de imágenes
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                API Routes para backend
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                Soporte para TypeScript
-              </li>
-            </ul>
-          </div>
+          <section className="bg-background text-foreground p-8 rounded-lg">
+      <h2 className="text-3xl font-bold mb-4">¿Por qué React con Next.js?</h2>
+      <div className="grid md:grid-cols-2 gap-8">
+        <div>
+          <p className="mb-4 text-muted-foreground">
+            React es una biblioteca de JavaScript para construir interfaces de usuario, mientras que Next.js es un
+            framework que se construye sobre React, añadiendo características como renderizado del lado del servidor,
+            generación de sitios estáticos, y más.
+          </p>
+          <p className="text-muted-foreground">
+            Juntos, proporcionan una experiencia de desarrollo potente y flexible para crear aplicaciones web modernas
+            y de alto rendimiento.
+          </p>
         </div>
-      </section>
+        <div className="bg-card text-card-foreground p-6 rounded-lg shadow-md">
+          <h3 className="text-xl font-semibold mb-3">Características destacadas:</h3>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              Renderizado híbrido (cliente + servidor)
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              Enrutamiento basado en el sistema de archivos
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              Optimización automática de imágenes
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              API Routes para backend
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              Soporte para TypeScript
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     </div>
   )
 }

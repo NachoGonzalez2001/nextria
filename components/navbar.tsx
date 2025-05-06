@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { ThemeToggle } from "@/components/ui/theme-toggle" // tema
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -24,6 +25,8 @@ export default function Navbar() {
         <Link href="/" className="mr-6 ml-5 flex items-center space-x-2">
           <span className="hidden font-bold sm:inline-block">React con Next.js</span>
         </Link>
+
+        {/* Navegación desktop */}
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
           <nav className="flex items-center space-x-6">
             {routes.map((route) => (
@@ -38,7 +41,10 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
+
+          {/* Botones derechos */}
           <div className="flex items-center space-x-2">
+            <ThemeToggle /> {/* boton para cambiar tema*/}
             <Button variant="outline" size="sm" asChild>
               <Link href="https://react.dev" target="_blank" rel="noopener noreferrer">
                 React Docs
@@ -51,6 +57,8 @@ export default function Navbar() {
             </Button>
           </div>
         </div>
+
+        {/* Menú mobile */}
         <div className="flex flex-1 items-center justify-end md:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -73,6 +81,7 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <div className="flex flex-col gap-2 mt-4 pt-4 border-t">
+                  <ThemeToggle /> {/* ✅ BOTÓN DE TEMA EN MOBILE */}
                   <Button variant="outline" size="sm" asChild>
                     <Link href="https://react.dev" target="_blank" rel="noopener noreferrer">
                       React Docs
